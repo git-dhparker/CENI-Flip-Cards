@@ -1,0 +1,226 @@
+.nav-tabs .nav-item .nav-link {
+    font-size: 1.25em;
+}
+
+h4 {
+    font-weight: lighter;
+}
+
+h3 {
+    font-weight: lighter;
+}
+
+.cards h1 {
+    font-weight: lighter !important;
+    padding: 20px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 550px;
+    height: 320px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform .8s;
+    transform-style: preserve-3d
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg)
+}
+
+.flip-card-back,
+.flip-card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: #000
+}
+
+.flip-card-back {
+    background-color: #1e90ff;
+    color: #fff;
+    transform: rotateY(180deg)
+}
+
+/* card border color */
+.community-learn {
+    border-left: solid 10px #e58db4;
+}
+
+.community-grow {
+    border-left: solid 10px #eab6cd;
+}
+
+.community-practice {
+    border-left: solid 10px #ffe6f1;
+}
+
+.identities-learn {
+    border-left: solid 10px #ab91e8;
+}
+
+.identities-grow {
+    border-left: solid 10px #c0b1de;
+}
+
+.identities-practice {
+    border-left: solid 10px #eee6fe;
+}
+
+.leadership-learn {
+    border-left: solid 10px #f9d362;
+}
+
+.leadership-grow {
+    border-left: solid 10px #fbe090;
+}
+
+.leadership-practice {
+    border-left: solid 10px #fff6dc;
+}
+
+.resources-learn {
+    border-left: solid 10px #75b45f;
+}
+
+.resources-grow {
+    border-left: solid 10px #a2d291;
+}
+
+.resources-practice {
+    border-left: solid 10px #edffe7;
+}
+
+/* one column for card content */
+.flipper-content {
+    width: 100%;
+    padding: 15px
+}
+
+.flipper-content p {
+    font-size: 0.9em;
+    text-align: left;
+}
+
+.flipper-content h4 {
+    text-align: center;
+}
+
+/* back of card styling */
+.quote {
+    font-style: italic;
+}
+
+.question {
+    font-weight: bolder;
+}
+
+/* background img's */
+.front-bg {
+    background: url(https://icat.vt.edu/img/funky-lines.png-02.png);
+}
+
+.back-bg {
+    background: url(https://icat.vt.edu/img/tweed.png);
+}
+
+<style>
+
+/* The flip card container - set the max-width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* the divs the cards are floating in.... */
+.card-box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-box {
+    margin: 10px;
+}
+
+.stay-flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Media queries for smaller screens */
+@media screen and (max-width: 600px) {
+    .flip-card {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .flip-card {
+        height: 150px;
+    }
+
+    .card-box {
+        margin: 5px;
+    }
+}
